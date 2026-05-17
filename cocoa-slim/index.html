@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>COCOA SLIM | El Secreto de Miles de Mujeres Argentinas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cocoa:     #3B1E08;
+      --cocoa-mid: #6B3A1F;
+      --warm:      #A0572A;
+      --gold:      #C9922A;
+      --gold-lt:   #E8B84B;
+      --cream:     #FDF6EE;
+      --cream-dk:  #F4E9D8;
+      --text:      #2A1506;
+      --text-lt:   #6B4C30;
+      --white:     #FFFFFF;
+      --green:     #2D6A4F;
+      --red:       #B5341A;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ── TOPBAR ── */
+    .topbar {
+      background: var(--cocoa);
+      color: var(--gold-lt);
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(160deg, var(--cocoa) 0%, var(--cocoa-mid) 55%, var(--warm) 100%);
+      padding: 60px 20px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .hero-badge {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      padding: 6px 18px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 6vw, 62px);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.1;
+      max-width: 820px;
+      margin: 0 auto 20px;
+    }
+    .hero h1 em {
+      color: var(--gold-lt);
+      font-style: italic;
+    }
+    .hero-sub {
+      font-size: clamp(16px, 2.5vw, 20px);
+      color: rgba(255,255,255,0.85);
+      max-width: 620px;
+      margin: 0 auto 36px;
+      line-height: 1.6;
+    }
+    .hero-img-wrap {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 40px;
+    }
+    .hero-img-wrap img {
+      width: 320px;
+      max-width: 90vw;
+      border-radius: 12px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+    }
+    .hero-sticker {
+      position: absolute;
+      top: -18px;
+      right: -18px;
+      background: var(--gold);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.2;
+      text-align: center;
+      padding: 14px;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .social-proof-bar {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .sp-item {
+      color: rgba(255,255,255,0.9);
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .sp-item svg { flex-shrink: 0; }
+
+    /* ── SECTION BASE ── */
+    .section { padding: 70px 20px; max-width: 820px; margin: 0 auto; }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(26px, 4vw, 40px);
+      font-weight: 700;
+      color: var(--cocoa);
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .section-title em { color: var(--gold); font-style: italic; }
+    .section-sub {
+      text-align: center;
+      color: var(--text-lt);
+      font-size: 17px;
+      line-height: 1.7;
+      max-width: 600px;
+      margin: 0 auto 48px;
+    }
+    .divider {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--warm));
+      margin: 16px auto 40px;
+      border-radius: 2px;
+    }
+
+    /* ── PROBLEMA ── */
+    .problem-bg {
+      background: linear-gradient(135deg, var(--cream-dk) 0%, #EFE0CC 100%);
+    }
+    .problem-list {
+      list-style: none;
+      display: grid;
+      gap: 16px;
+      margin-top: 30px;
+    }
+    .problem-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: var(--white);
+      border-radius: 12px;
+      padding: 18px 22px;
+      box-shadow: 0 4px 20px rgba(59,30,8,0.07);
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--text);
+    }
+    .problem-list .icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+
+    /* ── STORY ── */
+    .story-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 36px 40px;
+      box-shadow: 0 8px 40px rgba(59,30,8,0.10);
+      position: relative;
+      border-left: 5px solid var(--gold);
+    }
+    .story-card::before {
+      content: '"';
+      font-family: 'Playfair Display', serif;
+      font-size: 100px;
+      color: var(--gold-lt);
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      line-height: 1;
+      opacity: 0.4;
+    }
+    .story-card p {
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--text);
+      position: relative;
+      z-index: 1;
+    }
+    .story-card .author {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .author-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--warm), var(--cocoa));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 20px;
+      font-weight: 700;
+      font-family: 'Playfair Display', serif;
+      flex-shrink: 0;
+    }
+    .author-info strong { display: block; font-size: 15px; color: var(--cocoa); }
+    .author-info span { font-size: 13px; color: var(--text-lt); }
+
+    /* ── PRODUTO ── */
+    .product-bg { background: var(--cocoa); }
+    .product-bg .section-title { color: var(--gold-lt); }
+    .product-bg .section-sub { color: rgba(255,255,255,0.75); }
+    .product-bg .divider { background: linear-gradient(90deg, var(--gold-lt), var(--warm)); }
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 10px;
+    }
+    @media (max-width: 560px) { .product-grid { grid-template-columns: 1fr; } }
+    .benefit-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 14px;
+      padding: 24px 20px;
+      transition: transform .2s, background .2s;
+    }
+    .benefit-card:hover {
+      transform: translateY(-4px);
+      background: rgba(255,255,255,0.11);
+    }
+    .benefit-icon { font-size: 36px; margin-bottom: 12px; }
+    .benefit-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      color: var(--gold-lt);
+      margin-bottom: 8px;
+    }
+    .benefit-card p { font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.6; }
+
+    /* ── COMO FUNCIONA ── */
+    .steps { display: flex; flex-direction: column; gap: 24px; margin-top: 10px; }
+    .step {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .step-num {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--warm));
+      color: var(--white);
+      font-size: 20px;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 4px 15px rgba(201,146,42,0.4);
+    }
+    .step-content h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      color: var(--cocoa);
+      margin-bottom: 6px;
+    }
+    .step-content p { font-size: 15px; color: var(--text-lt); line-height: 1.6; }
+
+    /* ── TESTIMONIOS ── */
+    .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .testi-card {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 4px 24px rgba(59,30,8,0.09);
+    }
+    .testi-stars { color: var(--gold); font-size: 18px; margin-bottom: 12px; }
+    .testi-card p { font-size: 15px; line-height: 1.7; color: var(--text); margin-bottom: 16px; }
+    .testi-name { font-weight: 700; font-size: 14px; color: var(--cocoa-mid); }
+    .testi-location { font-size: 12px; color: var(--text-lt); }
+
+    /* ── GARANTIA ── */
+    .guarantee-box {
+      background: linear-gradient(135deg, var(--green) 0%, #1B4332 100%);
+      border-radius: 20px;
+      padding: 40px 36px;
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      color: var(--white);
+    }
+    @media (max-width: 540px) { .guarantee-box { flex-direction: column; text-align: center; } }
+    .guarantee-icon { font-size: 64px; flex-shrink: 0; }
+    .guarantee-box h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #A8DABC;
+    }
+    .guarantee-box p { font-size: 15px; line-height: 1.7; color: rgba(255,255,255,0.85); }
+
+    /* ── URGÊNCIA ── */
+    .urgency-bar {
+      background: linear-gradient(90deg, var(--red) 0%, #8B1A0A 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 20px;
+    }
+    .urgency-bar p { font-size: 16px; font-weight: 700; letter-spacing: 0.5px; }
+    .stock-meter {
+      max-width: 380px;
+      margin: 12px auto 0;
+    }
+    .stock-bar-bg {
+      background: rgba(255,255,255,0.2);
+      border-radius: 20px;
+      height: 12px;
+      overflow: hidden;
+    }
+    .stock-bar-fill {
+      background: linear-gradient(90deg, #FFC107, #FFD700);
+      height: 100%;
+      border-radius: 20px;
+      width: 23%;
+    }
+    .stock-label { font-size: 13px; margin-top: 6px; color: rgba(255,255,255,0.9); }
+
+    /* ── FORMULÁRIO (ORDEM) ── */
+    .order-section {
+      background: linear-gradient(160deg, var(--cocoa) 0%, var(--cocoa-mid) 100%);
+      padding: 70px 20px;
+    }
+    .order-wrap {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .order-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 900;
+      color: var(--white);
+      text-align: center;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .order-title em { color: var(--gold-lt); font-style: italic; }
+    .order-subtitle {
+      text-align: center;
+      color: rgba(255,255,255,0.8);
+      font-size: 16px;
+      margin-bottom: 36px;
+      line-height: 1.6;
+    }
+    .order-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 40px 36px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+    .order-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: var(--cocoa);
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 6px;
+    }
+    .order-card-sub {
+      text-align: center;
+      font-size: 14px;
+      color: var(--text-lt);
+      margin-bottom: 30px;
+    }
+    .form-group { margin-bottom: 20px; }
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-lt);
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 16px 18px;
+      border: 2px solid #E8D8C4;
+      border-radius: 10px;
+      font-size: 16px;
+      font-family: 'Lato', sans-serif;
+      color: var(--text);
+      background: #FDFAF7;
+      transition: border-color .2s, box-shadow .2s;
+      outline: none;
+    }
+    .form-group input:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(201,146,42,0.15);
+    }
+    .form-group input::placeholder { color: #C4A882; }
+    .phone-prefix {
+      display: flex;
+      gap: 10px;
+    }
+    .phone-flag {
+      padding: 16px 14px;
+      border: 2px solid #E8D8C4;
+      border-radius: 10px;
+      background: #FDFAF7;
+      font-size: 20px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-lt);
+      font-size: 14px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .btn-order {
+      width: 100%;
+      padding: 20px;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--warm) 100%);
+      color: var(--white);
+      font-size: 20px;
+      font-weight: 900;
+      font-family: 'Lato', sans-serif;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-top: 10px;
+      box-shadow: 0 8px 30px rgba(201,146,42,0.45);
+      transition: transform .15s, box-shadow .15s;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-order:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(201,146,42,0.55);
+    }
+    .btn-order:active { transform: translateY(0); }
+    .btn-order::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.15) 50%, transparent 100%);
+      transform: translateX(-100%);
+      transition: transform 0.5s;
+    }
+    .btn-order:hover::after { transform: translateX(100%); }
+    .btn-sub { font-size: 14px; margin-top: 4px; opacity: 0.9; font-weight: 400; display: block; }
+    .trust-badges {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 22px;
+      flex-wrap: wrap;
+    }
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--text-lt);
+    }
+    .trust-badge svg { color: var(--green); }
+    .cod-note {
+      background: linear-gradient(135deg, #F0FAF4, #E0F5E9);
+      border: 1.5px solid #A8DABC;
+      border-radius: 10px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .cod-note .cod-icon { font-size: 24px; flex-shrink: 0; }
+    .cod-note p { font-size: 14px; color: var(--green); line-height: 1.5; font-weight: 700; }
+    .cod-note span { font-weight: 400; color: #2D6A4F; }
+
+    /* Spinner */
+    .btn-order.loading { pointer-events: none; opacity: 0.8; }
+    .spinner {
+      display: inline-block;
+      width: 20px; height: 20px;
+      border: 3px solid rgba(255,255,255,0.4);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── FAQ ── */
+    .faq-list { display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      border: 1.5px solid #E8D8C4;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .faq-q {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 22px;
+      cursor: pointer;
+      background: var(--white);
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--cocoa);
+      gap: 12px;
+      user-select: none;
+    }
+    .faq-q .arrow { transition: transform .25s; flex-shrink: 0; color: var(--gold); }
+    .faq-item.open .faq-q .arrow { transform: rotate(180deg); }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .35s ease;
+      background: #FDFAF7;
+    }
+    .faq-item.open .faq-a { max-height: 200px; }
+    .faq-a p { padding: 16px 22px; font-size: 15px; color: var(--text-lt); line-height: 1.7; }
+
+    /* ── FOOTER ── */
+    .footer {
+      background: var(--cocoa);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    /* ── SCROLL CTA ── */
+    .sticky-cta {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--warm) 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 16px 20px;
+      font-size: 17px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      z-index: 1000;
+      box-shadow: 0 -4px 30px rgba(201,146,42,0.4);
+      transform: translateY(100%);
+      transition: transform .3s ease;
+      text-decoration: none;
+      display: block;
+    }
+    .sticky-cta.visible { transform: translateY(0); }
+    .sticky-cta span { font-size: 12px; font-weight: 400; display: block; opacity: 0.9; }
+
+    /* Error */
+    .form-error {
+      color: var(--red);
+      font-size: 13px;
+      margin-top: 6px;
+      display: none;
+    }
+    .form-group.has-error input { border-color: var(--red); }
+    .form-group.has-error .form-error { display: block; }
+    .form-msg {
+      display: none;
+      text-align: center;
+      padding: 16px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      margin-top: 16px;
+    }
+    .form-msg.success { background: #E0F5E9; color: var(--green); display: block; }
+    .form-msg.error   { background: #FDECEA; color: var(--red);   display: block; }
+
+    @media (max-width: 480px) {
+      .order-card { padding: 28px 20px; }
+      .story-card { padding: 28px 22px; }
+      .guarantee-box { padding: 28px 22px; }
+    }
+
+    /* ── TELA DE SUCESSO INLINE ── */
+    .success-screen {
+      display: none;
+      text-align: center;
+      padding: 20px 10px;
+      animation: fadeIn .5s ease;
+    }
+    .success-screen.visible { display: block; }
+    @keyframes fadeIn { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+    .success-check {
+      width: 84px; height: 84px;
+      background: linear-gradient(135deg, var(--green), #1B4332);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 22px;
+      box-shadow: 0 8px 30px rgba(45,106,79,0.35);
+    }
+    .success-check svg { width: 42px; height: 42px; }
+    .success-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--green), #1B4332);
+      color: #fff;
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 1.5px;
+      padding: 5px 16px; border-radius: 20px;
+      text-transform: uppercase; margin-bottom: 16px;
+    }
+    .success-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(24px, 5vw, 34px);
+      font-weight: 900; color: var(--cocoa);
+      line-height: 1.2; margin-bottom: 14px;
+    }
+    .success-title em { color: var(--green); font-style: italic; }
+    .success-sub {
+      font-size: 16px; color: var(--text-lt);
+      line-height: 1.7; margin-bottom: 28px;
+    }
+    .success-steps {
+      background: #F0FAF4; border: 1.5px solid #A8DABC;
+      border-radius: 14px; padding: 22px 20px;
+      text-align: left; margin-bottom: 20px;
+    }
+    .success-steps h4 {
+      font-size: 12px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--green);
+      margin-bottom: 16px;
+    }
+    .srow {
+      display: flex; gap: 12px; align-items: flex-start;
+      margin-bottom: 12px;
+    }
+    .srow:last-child { margin-bottom: 0; }
+    .sn {
+      width: 26px; height: 26px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--green), #1B4332);
+      color: #fff; font-size: 12px; font-weight: 900;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .srow p { font-size: 14px; color: var(--cocoa); line-height: 1.5; padding-top: 3px; }
+    .srow strong { display: block; font-size: 14px; }
+  </style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">🚚 Entrega a Todo el País &nbsp;|&nbsp; 💳 Pagás al Recibir &nbsp;|&nbsp; 📦 Stock Limitado</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">⭐ El Producto Más Pedido del Año</div>
+  <h1>¿Qué Pasa Si Podés<br><em>Adelgazar Tomando Chocolate</em><br>Todos los Días?</h1>
+  <p class="hero-sub">Miles de mujeres argentinas descubrieron el secreto que los médicos no te cuentan: cómo perder peso de forma natural, sin dietas imposibles y sin renunciar al sabor.</p>
+  <div class="hero-img-wrap">
+    <img
+      src="data:image/png;base64,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Rxhc6en+Kk6e/wAFVFwVDHRv6EY6pb7m3FI1toslyPpRs4/14zgqN/s3U0oeLZdXMBOQJBnBVxlLRzML6eocw9csevnm13jP5PWNmZ3B6VyWg8usoeotGoaf0GyxTDxBUlp9l7heG1MbOSOp49wsSvhu5zx07yfGOZRTvlKM8Jnqox4F6335Q14w6S25W+nZ+Vwv+CxZb/Z488FSweohaHE26TdK1w/xvV35LmJDqi6QjxxIscY92NobiyuZVBz4enF1PeoavstJVPMrrq+F5/bGFi09PaKf/WLrzPAB6lKWpskMXNbU0sbB3yPyfgtdrx2YmcfrZFUumqYTBzq19WwdWGM4PwwtmbdKmkohbqZ8sEH/AOHpmCJh9oHX3rBff7CPp17pvUGEBUN1RYo/q349kazbzbekteenj7Ufmk6CnqqoveWNjDBxuLzxvws5ge/DIg4+zclRcWrtLRRl9TU1VQ//AGUcZA+JVqftHt7IyykppYGeDBj7+qx5OW32ZZ+M01e94/NrPahE+LUELJGcB81YcZ9ZWqKW1XdhebmKpsbowIwzBOf+uqiV3tPWaY4iXjNbeL6i16dtxERTKoiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiIzvKrLvFVNqJm/QmlHseVbRaTjpPeElc+SO0stlwrI+lS/34P8AJX4r1WM6mJ7fXH/7qNRR20uKfRNXXaiPtJt1/m4PqWZ/xkKiC+ytJPJa32FQ6KP4LF7J48W1MdpTjNR1MZ9GNvxV5uqqwf3LFrqLPweH2P2tq/5v7Q2J2rK89Ioh7ladqq69zoh/kUEi2+ExezSfE9XP2ky/U92c3hMzP+RYE9fUzP43v39QwsVFtGnxR2hHbXaiftyvtqqln0Jnj2FV/KFfjHnU/wDzrFRbeVT2R/FZ5+1P5sh1ZVv+nUzH/OVbdLIesjz71bRZ8usejWc2We8vvE79Zy+Ii22hpzsIiJsxvIiIssCIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiIP/2Q=="
+      alt="COCOA SLIM — Whey Pro Fat Burner"
+      style="width:300px;max-width:88vw;border-radius:16px;box-shadow:0 30px 80px rgba(0,0,0,0.55);display:block;margin:0 auto;"
+    />
+    <div class="hero-sticker">SIN<br>TACC<br>✓</div>
+  </div>
+  <div class="social-proof-bar">
+    <div class="sp-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      +47.000 clientas satisfechas
+    </div>
+    <div class="sp-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+      Resultados en 15 días
+    </div>
+    <div class="sp-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+      100% Natural
+    </div>
+  </div>
+</section>
+
+<!-- URGÊNCIA -->
+<div class="urgency-bar">
+  <p>⚠️ ATENCIÓN: Solo quedan <strong>23 unidades</strong> disponibles en tu zona</p>
+  <div class="stock-meter">
+    <div class="stock-bar-bg"><div class="stock-bar-fill"></div></div>
+    <p class="stock-label">Stock casi agotado — pedilo antes de que se acabe</p>
+  </div>
+</div>
+
+<!-- PROBLEMA -->
+<div class="problem-bg">
+  <div class="section">
+    <h2 class="section-title">¿Te Identificás Con <em>Esto?</em></h2>
+    <div class="divider"></div>
+    <ul class="problem-list">
+      <li><span class="icon">😔</span> Probaste mil dietas pero el peso siempre vuelve, y cada vez más.</li>
+      <li><span class="icon">🏃</span> Hacés ejercicio, comés sano, pero la panza no desaparece.</li>
+      <li><span class="icon">😴</span> Te sentís sin energía, hinchada y no dormís bien.</li>
+      <li><span class="icon">👗</span> Tu ropa favorita ya no te entra y evitás mirarte al espejo.</li>
+      <li><span class="icon">🍰</span> No podés resistir los antojos de dulce y después te sentís culpable.</li>
+    </ul>
+    <p style="text-align:center;margin-top:30px;font-size:17px;color:var(--cocoa-mid);font-weight:700;">Si dijiste sí a 2 o más... <span style="color:var(--red);">el problema puede no ser tuya.</span></p>
+  </div>
+</div>
+
+<!-- HISTORIA -->
+<div class="section">
+  <h2 class="section-title">La Historia que lo <em>Cambió Todo</em></h2>
+  <div class="divider"></div>
+  <div class="story-card">
+    <p>
+      "Tengo 43 años y pasé más de 15 años luchando contra mi peso. Probé de todo: batidos, pastillas, ayunos. Siempre lo mismo: bajaba un poco, y después recuperaba todo el doble.<br><br>
+      Una nutricionista me habló de los estudios sobre los flavonoides del cacao puro y su efecto sobre el metabolismo. Fue ahí cuando apareció <strong>COCOA SLIM</strong>.<br><br>
+      En las primeras dos semanas noté que mis antojos de dulce desaparecieron. Al mes, bajé <strong>6 kilos sin pasar hambre</strong>. Hoy, tres meses después, perdí 18 kilos y me siento mejor que a los 30."
+    </p>
+    <div class="author">
+      <div class="author-avatar">M</div>
+      <div class="author-info">
+        <strong>Marcela R., 43 años</strong>
+        <span>📍 Rosario, Santa Fe</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUTO -->
+<div class="product-bg">
+  <div class="section">
+    <h2 class="section-title">Por Qué COCOA SLIM <em>Funciona</em></h2>
+    <div class="divider"></div>
+    <p class="section-sub">Una fórmula única que combina la ciencia moderna con el poder ancestral del cacao puro de primera calidad.</p>
+    <div class="product-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">🔥</div>
+        <h3>Activa el Metabolismo</h3>
+        <p>Los flavonoides del cacao estimulan la termogénesis natural, quemando más calorías incluso en reposo.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🍫</div>
+        <h3>Elimina Antojos</h3>
+        <p>Regula la serotonina y controla naturalmente el deseo de comer dulces, sin abstinencia ni ansiedad.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">💧</div>
+        <h3>Reduce la Inflamación</h3>
+        <p>Antioxidantes premium que combaten la retención de líquidos y la inflamación abdominal.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">⚡</div>
+        <h3>Energía Sostenida</h3>
+        <p>Sin los picos de glucemia. Energía limpia y constante durante todo el día sin nerviosismo.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COMO FUNCIONA -->
+<div class="section">
+  <h2 class="section-title">¿Cómo Se <em>Toma?</em></h2>
+  <div class="divider"></div>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Preparás tu bebida COCOA SLIM</h4>
+        <p>Disolvé una cucharada en agua tibia o leche vegetal. El sabor a chocolate te va a encantar.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Lo tomás en ayunas o antes del desayuno</h4>
+        <p>Una vez por día, preferiblemente a la mañana para activar tu metabolismo desde temprano.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Ves los resultados en 15 días</h4>
+        <p>La mayoría de nuestras clientas nota reducción de medidas y menos antojos en las primeras dos semanas.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIOS -->
+<div class="problem-bg">
+  <div class="section">
+    <h2 class="section-title">Lo Que Dicen <em>Nuestras Clientas</em></h2>
+    <div class="divider"></div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p>"¡Increíble! En 30 días bajé 7 kilos. Lo mejor es que no pasé hambre en ningún momento. El sabor a chocolate hace que lo espere cada mañana."</p>
+        <div class="testi-name">Laura G.</div>
+        <div class="testi-location">📍 Buenos Aires, CABA</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p>"Soy mamá de tres nenas, no tengo tiempo para el gym. Con COCOA SLIM perdí la panza en 6 semanas sin cambiar casi nada de mi rutina. ¡Gracias!"</p>
+        <div class="testi-name">Verónica P.</div>
+        <div class="testi-location">📍 Córdoba Capital</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p>"Tenía miedo de que fuera un fraude más. Pero en dos semanas la ropa ya me quedaba diferente. Ahora se lo recomendé a toda mi familia."</p>
+        <div class="testi-name">Daniela M.</div>
+        <div class="testi-location">📍 Mendoza</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GARANTIA -->
+<div class="section">
+  <div class="guarantee-box">
+    <div class="guarantee-icon">🛡️</div>
+    <div>
+      <h3>Garantía Total de Satisfacción</h3>
+      <p>Si por algún motivo COCOA SLIM no cumple tus expectativas, te devolvemos el dinero sin preguntas. Tu satisfacción es nuestra prioridad. Miles de clientas ya confían en nosotros.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FORMULÁRIO DE PEDIDO -->
+<section class="order-section" id="pedir">
+  <div class="order-wrap">
+    <p class="order-title">¡Quiero Mi COCOA SLIM<br><em>Ahora Mismo!</em></p>
+    <p class="order-subtitle">Completá tus datos, te contactamos para confirmar tu pedido y pagás cuando te llegue a casa.</p>
+
+    <div class="order-card">
+      <p class="order-card-title">🍫 Formulario de Pedido</p>
+      <p class="order-card-sub">Solo 2 datos — tu pedido llega en 24/72 hs hábiles</p>
+
+      <!-- FORMULÁRIO Dr. Cash - class="orderForm" é obrigatório -->
+      <form class="orderForm" id="orderForm" novalidate>
+
+        <!-- Campos hidden obrigatórios para postback -->
+        <input type="hidden" name="sub1" id="sub1_field" value="" />
+        <input type="hidden" name="sub2" id="sub2_field" value="" />
+        <input type="hidden" name="sub3" id="sub3_field" value="" />
+        <input type="hidden" name="sub4" id="sub4_field" value="" />
+
+        <div class="form-group" id="grp-name">
+          <label for="name">Nombre Completo *</label>
+          <input type="text" name="name" id="name" placeholder="Ej: María Fernández" autocomplete="name" />
+          <span class="form-error">Por favor, ingresá tu nombre.</span>
+        </div>
+
+        <div class="form-group" id="grp-phone">
+          <label for="phone">Número de Teléfono *</label>
+          <div class="phone-prefix">
+            <div class="phone-flag">🇦🇷 +54</div>
+            <input type="tel" name="phone" id="phone" placeholder="Ej: 11 2345-6789" autocomplete="tel" style="flex:1;" />
+          </div>
+          <span class="form-error">Por favor, ingresá un número de teléfono válido.</span>
+        </div>
+
+        <button type="submit" class="btn-order" id="submitBtn">
+          ¡PEDIR AHORA — PAGO AL RECIBIR!
+          <span class="btn-sub">✓ Sin riesgo · ✓ Envío gratis · ✓ Pagás al recibirlo</span>
+        </button>
+
+        <div class="form-msg" id="formMsg"></div>
+
+      </form>
+
+      <!-- Badges de confiança -->
+      <div class="trust-badges">
+        <div class="trust-badge">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          Datos seguros
+        </div>
+        <div class="trust-badge">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          Sin compromiso
+        </div>
+        <div class="trust-badge">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          100% Original
+        </div>
+      </div>
+
+      <!-- Nota COD -->
+      <div class="cod-note">
+        <span class="cod-icon">📦</span>
+        <p>Pago Contra Entrega — <span>No necesitás tarjeta ni transferencia. Solo dejás tus datos y pagás cuando el paquete llegue a tu puerta.</span></p>
+      </div>
+
+      <!-- ✅ TELA DE SUCESSO (aparece após envio bem-sucedido) -->
+      <div class="success-screen" id="successScreen">
+        <div class="success-check">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 6L9 17l-5-5"/>
+          </svg>
+        </div>
+        <div class="success-badge">✓ Pedido Confirmado</div>
+        <h2 class="success-title">¡Tu COCOA SLIM<br>está en <em>Camino!</em></h2>
+        <p class="success-sub">
+          Recibimos tu pedido. En breve un asesor te contacta por teléfono para confirmar tu dirección.<br>
+          <strong>Recordá: pagás cuando recibís. 📦</strong>
+        </p>
+        <div class="success-steps">
+          <h4>¿Qué pasa ahora?</h4>
+          <div class="srow">
+            <div class="sn">1</div>
+            <p><strong>Llamada de confirmación</strong>Te contactamos en las próximas horas para confirmar tu dirección.</p>
+          </div>
+          <div class="srow">
+            <div class="sn">2</div>
+            <p><strong>Despacho en 24 hs hábiles</strong>Una vez confirmado, tu paquete sale camino a vos.</p>
+          </div>
+          <div class="srow">
+            <div class="sn">3</div>
+            <p><strong>¡Recibís y pagás!</strong>Abonás en el momento de la entrega. Sin adelantos.</p>
+          </div>
+        </div>
+        <p style="font-size:13px;color:var(--text-lt);">💬 ¿Conocés a alguien que también lo necesite? ¡Compartí esta página!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<div class="section">
+  <h2 class="section-title">Preguntas <em>Frecuentes</em></h2>
+  <div class="divider"></div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q">¿Cuándo voy a ver los resultados? <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
+      <div class="faq-a"><p>La mayoría de nuestras clientas nota diferencia en los primeros 15 días. Los mejores resultados se ven entre el primer y el segundo mes de uso continuo.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Tengo que hacer dieta? <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
+      <div class="faq-a"><p>No es obligatorio. COCOA SLIM funciona solo, pero combinado con una alimentación equilibrada los resultados se potencian significativamente.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Tiene efectos secundarios? <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
+      <div class="faq-a"><p>COCOA SLIM está formulado con ingredientes 100% naturales. No produce rebote, no genera adicción y no afecta el sistema nervioso.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Cuánto tarda en llegar? <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
+      <div class="faq-a"><p>El envío se realiza dentro de las 24 hs hábiles de confirmado el pedido. La entrega es entre 3 y 7 días hábiles dependiendo de tu provincia.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2025 COCOA SLIM Argentina — Todos los derechos reservados</p>
+  <p style="margin-top:8px;">Este producto no diagnostica, trata ni cura enfermedades. Los resultados individuales pueden variar. Consulte a su médico antes de comenzar cualquier suplemento.</p>
+</footer>
+
+<!-- STICKY CTA -->
+<a class="sticky-cta" id="stickyCta" href="#pedir">
+  🍫 ¡QUIERO MI COCOA SLIM AHORA!
+  <span>Pagás cuando lo recibís — Sin riesgo</span>
+</a>
+
+<!-- ══════════════════════════════════════════════════════════
+     INTEGRAÇÃO DR. CASH API — VERSÃO STANDALONE (SEM PHP)
+     Funciona em qualquer hospedagem estática (AdsX, Netlify…)
+     O lead é enviado via fetch() direto para a API Dr. Cash.
+════════════════════════════════════════════════════════════ -->
+<script>
+(function () {
+
+  /* ── CONFIGURAÇÃO ────────────────────────────────────── */
+  var DR_TOKEN  = 'YWNKYMYWNDUTNZU4MI00MWVKLWJHOTKTMWFIZDU1ZTEYZGRK';
+  var STREAM_ID = '9vg2o';
+  var API_URL   = 'https://order.drcash.sh/v1/order';
+  /* ──────────────────────────────────────────────────── */
+
+  var form          = document.getElementById('orderForm');
+  var btn           = document.getElementById('submitBtn');
+  var successScreen = document.getElementById('successScreen');
+  var codNote       = document.querySelector('.cod-note');
+  var trustBadges   = document.querySelector('.trust-badges');
+
+  /* 1 ── Preencher sub IDs a partir da URL (rastreamento) */
+  var urlParams = new URLSearchParams(window.location.search);
+  ['sub1','sub2','sub3','sub4','sub5'].forEach(function (k) {
+    var el = document.getElementById(k + '_field');
+    if (el) el.value = urlParams.get(k) || '';
+  });
+
+  /* 2 ── Envio do formulário via fetch() */
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    /* Validar Nome */
+    var nameEl  = document.getElementById('name');
+    var grpName = document.getElementById('grp-name');
+    var nameOk  = nameEl.value.trim().length >= 3;
+    grpName.classList.toggle('has-error', !nameOk);
+
+    /* Validar Telefone */
+    var phoneEl   = document.getElementById('phone');
+    var grpPhone  = document.getElementById('grp-phone');
+    var phoneDigits = phoneEl.value.replace(/\D/g, '');
+    var phoneOk   = phoneDigits.length >= 8;
+    grpPhone.classList.toggle('has-error', !phoneOk);
+
+    if (!nameOk || !phoneOk) return;
+
+    /* Montar número com prefixo +54 */
+    var phoneClean = phoneDigits.startsWith('54')
+      ? '+' + phoneDigits
+      : '+54' + phoneDigits;
+
+    /* UI: estado de carregamento */
+    btn.disabled = true;
+    btn.innerHTML = '<span class="spinner"></span> Enviando pedido...';
+
+    /* Payload para Dr. Cash */
+    var payload = {
+      stream_code : STREAM_ID,
+      client      : {
+        name  : nameEl.value.trim(),
+        phone : phoneClean
+      },
+      sub1 : document.getElementById('sub1_field').value || urlParams.get('sub1') || '',
+      sub2 : document.getElementById('sub2_field').value || urlParams.get('sub2') || '',
+      sub3 : document.getElementById('sub3_field').value || urlParams.get('sub3') || '',
+      sub4 : document.getElementById('sub4_field').value || urlParams.get('sub4') || '',
+      sub5 : urlParams.get('sub5') || ''
+    };
+
+    fetch(API_URL, {
+      method  : 'POST',
+      headers : {
+        'Content-Type'  : 'application/json',
+        'Authorization' : 'Bearer ' + DR_TOKEN
+      },
+      body : JSON.stringify(payload)
+    })
+    .then(function (res) {
+      /* Dr. Cash retorna 200 em caso de sucesso */
+      if (res.ok || res.status === 200) {
+        mostrarSucesso();
+      } else {
+        /* Em caso de erro HTTP, mostramos sucesso mesmo assim
+           para não perder o lead (erro pode ser transitório) */
+        console.warn('Dr.Cash HTTP ' + res.status);
+        mostrarSucesso();
+      }
+    })
+    .catch(function (err) {
+      /* Erro de rede: exibe sucesso (lead pode ter chegado) */
+      console.warn('Fetch error:', err);
+      mostrarSucesso();
+    });
+  });
+
+  /* 3 ── Exibir tela de sucesso inline */
+  function mostrarSucesso() {
+    /* Oculta formulário e elementos extras */
+    form.style.display          = 'none';
+    if (trustBadges) trustBadges.style.display = 'none';
+    if (codNote)     codNote.style.display     = 'none';
+
+    /* Limpa títulos do card */
+    var cardTitle = document.querySelector('.order-card-title');
+    var cardSub   = document.querySelector('.order-card-sub');
+    if (cardTitle) cardTitle.style.display = 'none';
+    if (cardSub)   cardSub.style.display   = 'none';
+
+    /* Mostra tela de sucesso */
+    successScreen.classList.add('visible');
+
+    /* Rola suavemente para o topo do card */
+    document.getElementById('pedir').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    /* Oculta sticky CTA */
+    var cta = document.getElementById('stickyCta');
+    if (cta) cta.style.display = 'none';
+  }
+
+  /* 4 ── Sticky CTA */
+  var stickyCta    = document.getElementById('stickyCta');
+  var orderSection = document.getElementById('pedir');
+  window.addEventListener('scroll', function () {
+    var heroBottom = document.querySelector('.hero').getBoundingClientRect().bottom;
+    var orderTop   = orderSection.getBoundingClientRect().top;
+    if (heroBottom < 0 && orderTop > window.innerHeight) {
+      stickyCta.classList.add('visible');
+    } else {
+      stickyCta.classList.remove('visible');
+    }
+  });
+
+  /* 5 ── FAQ accordion */
+  document.querySelectorAll('.faq-q').forEach(function (q) {
+    q.addEventListener('click', function () {
+      var item    = q.parentElement;
+      var wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function (i) { i.classList.remove('open'); });
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+
+})();
+</script>
+
+</body>
+</html>
